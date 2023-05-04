@@ -28,20 +28,20 @@ dev_dependencies:
 flutter_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/images/logo_blue.png"
+  image_path: "assets/images/3.0x/logo_blue.png"
   min_sdk_android: 21 # android min sdk min:16, default 21
   web:
     generate: true
-    image_path: "assets/images/logo_blue.png"
+    image_path: "assets/images/3.0x/logo_blue.png"
     background_color: "#ffffffff"
     theme_color: "#4169E1"
   windows:
     generate: true
-    image_path: "assets/images/logo_blue.png"
+    image_path: "assets/images/3.0x/logo_blue.png"
     icon_size: 48 # min:48, max:256, default: 48
   macos:
     generate: true
-    image_path: "assets/images/logo_blue.png"
+    image_path: "assets/images/3.0x/logo_blue.png"
 
 flutter:
   uses-material-design: true
