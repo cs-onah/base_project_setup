@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swiftsell/ui/shared/widgets/snackbar_feedback_widget.dart';
 
 extension BuildContextExt on BuildContext {
   ThemeData get themeData => Theme.of(this);
@@ -22,6 +23,24 @@ extension BuildContextExt on BuildContext {
   EdgeInsets get screenPadding => MediaQuery.of(this).padding;
 
   double get width => MediaQuery.of(this).size.width;
+
+  void showErrorSnackBar(dynamic error) =>
+      ScaffoldMessenger.of(this).showSnackBar(
+        appSnackBar(
+          this,
+          message: "$error",
+          feedbackType: SnackBarFeedbackType.error,
+        ),
+      );
+
+  void showSuccessSnackBar(dynamic message) =>
+      ScaffoldMessenger.of(this).showSnackBar(
+        appSnackBar(
+          this,
+          message: "$message",
+          feedbackType: SnackBarFeedbackType.error,
+        ),
+      );
 
   ///Navigation
   T customTheme<T>() => Theme.of(this).extension<T>()!;
@@ -59,10 +78,10 @@ extension BuildContextExt on BuildContext {
       Navigator.of(this).pushNamed(routeName, arguments: arguments);
 
   Future<T?> pushNamedAndRemoveUntil<T extends Object?>(
-      String newRouteName,
-      RoutePredicate predicate, {
-        Object? arguments,
-      }) =>
+    String newRouteName,
+    RoutePredicate predicate, {
+    Object? arguments,
+  }) =>
       Navigator.of(this).pushNamedAndRemoveUntil(newRouteName, predicate,
           arguments: arguments);
 

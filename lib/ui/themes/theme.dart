@@ -60,6 +60,7 @@ ThemeData _buildLightTheme() {
         textStyle: AppTextStyles.body2Regular.copyWith(color: _Colors.blue),
       ),
     ),
+    textTheme: TextTheme()
   );
   return themeData;
 }
