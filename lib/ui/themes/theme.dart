@@ -1,6 +1,7 @@
 library theme;
 
 import 'package:flutter/material.dart';
+import 'package:swiftsell/ui/themes/colors_theme_extension.dart';
 
 part 'colors.dart';
 part 'fonts.dart';
@@ -26,7 +27,6 @@ ThemeData _buildLightTheme() {
       backgroundColor: Colors.transparent,
       centerTitle: true,
       elevation: 0,
-      color: _Colors.darkBlue,
     ),
     snackBarTheme: SnackBarThemeData(
       elevation: 0,
@@ -60,7 +60,18 @@ ThemeData _buildLightTheme() {
         textStyle: AppTextStyles.body2Regular.copyWith(color: _Colors.blue),
       ),
     ),
-    textTheme: TextTheme()
+    textTheme: TextTheme(
+      bodyMedium: AppTextStyles.body2Regular,
+      displayLarge: AppTextStyles.heading1Bold.copyWith(color: _Colors.white),
+    ),
+    extensions: [
+      ColorThemeExt(
+        green: _Colors.green,
+        red: _Colors.red,
+        yellow: _Colors.yellow,
+        blue: _Colors.blue,
+      ),
+    ],
   );
   return themeData;
 }

@@ -37,63 +37,6 @@ class ImageRenderWidget extends StatelessWidget {
         fit: fit,
       );
 
-  // factory ImageRenderWidget.networkSize50(
-  //         {required String? imageUrl,
-  //         double? height,
-  //         double? width,
-  //         BoxFit fit = BoxFit.cover,
-  //         Widget? placeholder}) =>
-  //     ImageRenderWidget._(
-  //       imageUrl: imageUrl.getNewImageSize(50),
-  //       height: height,
-  //       width: width,
-  //       fit: fit,
-  //       placeholder: placeholder,
-  //     );
-  //
-  // factory ImageRenderWidget.networkSize100(
-  //         {required String? imageUrl,
-  //         double? height,
-  //         double? width,
-  //         BoxFit fit = BoxFit.cover,
-  //         Widget? placeholder}) =>
-  //     ImageRenderWidget._(
-  //       imageUrl: imageUrl.getNewImageSize(100),
-  //       height: height,
-  //       width: width,
-  //       fit: fit,
-  //       placeholder: placeholder,
-  //     );
-  //
-  // factory ImageRenderWidget.networkSize200(
-  //         {required String? imageUrl,
-  //         double? height,
-  //         double? width,
-  //         BoxFit fit = BoxFit.cover,
-  //         Widget? placeholder}) =>
-  //     ImageRenderWidget._(
-  //       imageUrl: imageUrl.getNewImageSize(200),
-  //       height: height,
-  //       width: width,
-  //       fit: fit,
-  //       placeholder: placeholder,
-  //     );
-  //
-  // factory ImageRenderWidget.networkSize(
-  //         {required String? imageUrl,
-  //         required int size,
-  //         double? height,
-  //         double? width,
-  //         BoxFit fit = BoxFit.cover,
-  //         Widget? placeholder}) =>
-  //     ImageRenderWidget._(
-  //       imageUrl: imageUrl.getNewImageSize(size),
-  //       height: height,
-  //       width: width,
-  //       fit: fit,
-  //       placeholder: placeholder,
-  //     );
-
   factory ImageRenderWidget.network(
           {required String? imageUrl,
           double? height,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swiftsell/core/constants/route_names.dart';
 import 'package:swiftsell/ui/shared/widgets/snackbar_feedback_widget.dart';
 
 extension BuildContextExt on BuildContext {
@@ -52,8 +53,8 @@ extension BuildContextExt on BuildContext {
   void popToFirstScreen() =>
       Navigator.of(this).popUntil((route) => route.isFirst);
 
-  // void pushAndRemoveUntilMasterPage() =>
-  //     pushNamedAndRemoveUntil(RouteNames.masterPage, (route) => false);
+  void pushAndRemoveUntilMasterPage() =>
+      pushNamedAndRemoveUntil(RouteNames.masterScreen, (route) => false);
 
   void pop<T>([T? result]) => Navigator.pop(this, result);
 

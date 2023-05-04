@@ -1,4 +1,4 @@
 class ImagePath {
-  static const svgBasePath = 'assets/images';
-
+  static const imgBasePath = 'assets/images';
+  static const logoWhite = '$imgBasePath/logo_white.png';
 }

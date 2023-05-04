@@ -30,7 +30,7 @@ flutter:
     - assets/images/
     - assets/svgs/
   fonts:
-    - family: Poppins
+    - family: Poppins-Bold
       fonts:
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 700

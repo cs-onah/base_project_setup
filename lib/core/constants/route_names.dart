@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swiftsell/ui/auth_module/pages/master_screen.dart';
 import 'package:swiftsell/ui/auth_module/pages/splash_screen.dart';
 
 class RouteNames {
@@ -6,12 +7,15 @@ class RouteNames {
   /// static const String splashScreen = '/splashScreen';
 
   static const String splashScreen = 'splashScreen';
+  static const String masterScreen = 'masterScreen';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       // Add your screen here as well as the transition you want
       case splashScreen:
         return MaterialPageRoute(builder: (context) => const SplashScreen());
+      case masterScreen:
+        return MaterialPageRoute(builder: (context) => const MasterScreen());
       default:
         return MaterialPageRoute(
           builder: (context) => errorView(settings.name),
