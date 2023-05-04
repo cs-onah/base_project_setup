@@ -9,5 +9,7 @@ class _Colors {
   static const red = Color(0xffCF5050);
   static const green = Color(0xff219653);
   static const black = Color(0xff080808);
+  static const textBlack = Color(0xff0D1F22);
   static const white = Colors.white;
+  static const scaffoldColor = Color(0xffF5F5F5);
 }
