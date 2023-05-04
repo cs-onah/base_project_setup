@@ -5,20 +5,11 @@ import 'package:swiftsell/core/utils/context_extension.dart';
 import 'package:swiftsell/ui/shared/widgets/image_render_widget.dart';
 import 'package:swiftsell/ui/themes/colors_theme_extension.dart';
 
-class SplashScreen extends HookWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final controller = useAnimationController(
-      duration: const Duration(seconds: 5),
-    );
-    controller.addStatusListener((AnimationStatus status) async {
-      if (status == AnimationStatus.completed) {
-        context.pushAndRemoveUntilMasterPage();
-      }
-    });
-    controller.animateTo(0.9);
     return Scaffold(
       backgroundColor: context.primaryColor,
       body: SafeArea(
@@ -38,17 +29,8 @@ class SplashScreen extends HookWidget {
               ],
             ),
             Spacer(flex: 2),
-            SizedBox(
-              width: 190,
-              child: AnimatedBuilder(
-                animation: controller,
-                builder: (_, __) => LinearProgressIndicator(
-                  minHeight: 3,
-                  value: controller.value,
-                  backgroundColor: context.customTheme<ColorThemeExt>().yellow,
-                  color: Colors.white,
-                ),
-              ),
+            AnimatedLinearProgressBar(
+              onLoadComplete: ()=> context.pushAndRemoveUntilMasterPage(),
             ),
             Spacer(flex: 2),
           ],
@@ -57,3 +39,35 @@ class SplashScreen extends HookWidget {
     );
   }
 }
+
+class AnimatedLinearProgressBar extends HookWidget {
+  final VoidCallback? onLoadComplete;
+  const AnimatedLinearProgressBar( {Key? key, this.onLoadComplete}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = useAnimationController(
+      duration: const Duration(seconds: 5),
+    );
+    controller.addStatusListener((AnimationStatus status) async {
+      if (status == AnimationStatus.completed) {
+        onLoadComplete?.call();
+      }
+    });
+
+    controller.animateTo(0.9);
+    return SizedBox(
+      width: 190,
+      child: AnimatedBuilder(
+        animation: controller,
+        builder: (_, __) => LinearProgressIndicator(
+          minHeight: 3,
+          value: controller.value,
+          backgroundColor: context.customTheme<ColorThemeExt>().yellow,
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
