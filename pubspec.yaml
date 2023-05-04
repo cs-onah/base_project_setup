@@ -34,7 +34,7 @@ flutter:
       fonts:
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 700
-    - family: Poppins-DemiBold
+    - family: Poppins-SemiBold
       fonts:
         - asset: assets/fonts/Poppins-SemiBold.ttf
           weight: 600

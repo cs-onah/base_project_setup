@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:swiftsell/core/constants/route_names.dart';
+import 'package:swiftsell/ui/themes/theme.dart';
 
 class SwiftSellApp extends StatelessWidget {
   const SwiftSellApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // theme: appTheme,
+      theme: appTheme,
       title: 'SwiftSell',
       initialRoute: RouteNames.splashScreen,
       onGenerateRoute: RouteNames.generateRoute,
