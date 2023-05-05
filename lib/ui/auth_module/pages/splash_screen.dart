@@ -4,6 +4,7 @@ import 'package:swiftsell/core/constants/image_path.dart';
 import 'package:swiftsell/core/utils/context_extension.dart';
 import 'package:swiftsell/ui/shared/widgets/image_render_widget.dart';
 import 'package:swiftsell/ui/themes/colors_theme_extension.dart';
+import 'package:swiftsell/ui/transitions/slide_opacity_transition.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -17,20 +18,25 @@ class SplashScreen extends StatelessWidget {
           children: [
             Row(),
             Spacer(flex: 4),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                ImageRenderWidget.asset(imagePath: ImagePath.logoWhite),
-                const SizedBox(width: 10),
-                Text(
-                  "Swiftsell",
-                  style: context.textTheme.displayLarge,
-                )
-              ],
+            SlideOpacityTransition(
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ImageRenderWidget.asset(imagePath: ImagePath.logoWhite),
+                  const SizedBox(width: 10),
+                  Text(
+                    "Swiftsell",
+                    style: context.textTheme.displayLarge,
+                  )
+                ],
+              ),
             ),
             Spacer(flex: 2),
-            AnimatedLinearProgressBar(
-              onLoadComplete: ()=> context.pushAndRemoveUntilMasterPage(),
+            SlideOpacityTransition(
+              duration: Duration(milliseconds: 1500),
+              child: AnimatedLinearProgressBar(
+                onLoadComplete: ()=> context.pushAndRemoveUntilMasterPage(),
+              ),
             ),
             Spacer(flex: 2),
           ],
@@ -55,7 +61,7 @@ class AnimatedLinearProgressBar extends HookWidget {
       }
     });
 
-    controller.animateTo(0.9);
+    controller.animateTo(0.96);
     return SizedBox(
       width: 190,
       child: AnimatedBuilder(
