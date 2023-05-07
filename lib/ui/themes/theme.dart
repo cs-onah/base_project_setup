@@ -85,6 +85,7 @@ ThemeData _buildLightTheme() {
         white: _Colors.white,
         textBlack: _Colors.textBlack,
         lighterBlue: _Colors.lighterBlue,
+        blueBg: _Colors.blueBg,
       ),
     ],
   );

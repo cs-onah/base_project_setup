@@ -9,8 +9,9 @@ class ColorThemeExt extends ThemeExtension<ColorThemeExt> {
   final Color textBlack;
   /// Use context.theme.cardColor instead
   final Color white;
+  final Color blueBg;
 
-  ColorThemeExt({required this.green, required this.red, required this.yellow, required this.blue, required this.lighterBlue, required this.white, required this.textBlack,});
+  ColorThemeExt({required this.green, required this.red, required this.yellow, required this.blue, required this.lighterBlue, required this.white, required this.textBlack, required this.blueBg});
   @override
   ThemeExtension<ColorThemeExt> copyWith({
     Color? green,
@@ -20,6 +21,7 @@ class ColorThemeExt extends ThemeExtension<ColorThemeExt> {
     Color? lighterBlue,
     Color? textBlack,
     Color? white,
+    Color? blueBg,
   }) {
     return ColorThemeExt(
       green: green ?? this.green,
@@ -29,6 +31,7 @@ class ColorThemeExt extends ThemeExtension<ColorThemeExt> {
       lighterBlue: lighterBlue ?? this.lighterBlue,
       textBlack: textBlack ?? this.textBlack,
       white: white ?? this.white,
+      blueBg: blueBg ?? this.blueBg,
     );
   }
 

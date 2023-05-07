@@ -130,7 +130,7 @@ class OnboardingInfoView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ImageRenderWidget.asset(imagePath: imagePath),
+        FittedBox(child: ImageRenderWidget.asset(imagePath: imagePath)),
         Spacer(),
         Text(
           title,
