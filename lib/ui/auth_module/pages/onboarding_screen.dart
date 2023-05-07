@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:swiftsell/core/constants/image_path.dart';
+import 'package:swiftsell/core/constants/route_names.dart';
 import 'package:swiftsell/core/utils/context_extension.dart';
 import 'package:swiftsell/ui/auth_module/widgets/bar_indicator.dart';
 import 'package:swiftsell/ui/shared/widgets/image_render_widget.dart';
@@ -12,6 +15,25 @@ class OnboardingScreen extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final page = useValueNotifier(0);
+    final pageController = PageController(initialPage: page.value);
+    useEffect(() {
+      final carouselEffect = Timer.periodic(Duration(seconds: 3), (timer) {
+        if (pageController.page == 2) {
+          pageController.animateToPage(
+            0,
+            duration: Duration(milliseconds: 300),
+            curve: Curves.linear,
+          );
+        } else {
+          pageController.nextPage(
+            duration: Duration(milliseconds: 700),
+            curve: Curves.linear,
+          );
+        }
+      });
+      return () => carouselEffect.cancel();
+    });
+
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -40,6 +62,7 @@ class OnboardingScreen extends HookWidget {
             Expanded(
               flex: 3,
               child: PageView(
+                controller: pageController,
                 onPageChanged: (value) => page.value = value,
                 children: const [
                   OnboardingInfoView(
@@ -80,7 +103,7 @@ class OnboardingScreen extends HookWidget {
                       onPressed: () {}, child: Text("Create Account")),
                   const SizedBox(height: 30),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () => context.pushNamed(RouteNames.signInScreen),
                     child: Text("I Already have an account"),
                   ),
                   Spacer(flex: 2),

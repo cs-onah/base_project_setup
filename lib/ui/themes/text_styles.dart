@@ -1,7 +1,7 @@
 part of theme;
 
 class AppTextStyles {
-  static const heading1Bold = TextStyle(
+  static const displayLargeDarkBlue = TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.w700,
     fontFamily: AppFont.poppinsBold,
@@ -15,15 +15,17 @@ class AppTextStyles {
     color: _Colors.lighterBlue,
   );
 
-  static const heading3Bold = TextStyle(
+  static const headingMediumTextBlue = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.w700,
     fontFamily: AppFont.poppinsBold,
-    color: _Colors.darkBlue,
+    color: _Colors.textBlue,
   );
 
-  static const subtitle = TextStyle(
-    fontSize: 28,
+  static const subtitle1 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    color: _Colors.textBlue,
   );
 
   static const body2Regular = TextStyle(
@@ -42,6 +44,12 @@ class AppTextStyles {
     fontSize: 14,
     fontFamily: AppFont.poppinsBold,
     color: _Colors.darkBlue,
+  );
+
+  static const captionBlue = TextStyle(
+    fontSize: 12,
+    fontFamily: AppFont.poppinsRegular,
+    color: _Colors.textBlue,
   );
 
 }

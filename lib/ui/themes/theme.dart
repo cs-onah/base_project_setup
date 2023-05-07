@@ -61,9 +61,20 @@ ThemeData _buildLightTheme() {
         textStyle: AppTextStyles.body2Regular.copyWith(color: _Colors.blue),
       ),
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(4),
+        borderSide: BorderSide(color: _Colors.grey),
+      ),
+      isDense: true,
+      hintStyle: TextStyle(fontSize: 16, color: _Colors.grey),
+    ),
     textTheme: TextTheme(
       bodyMedium: AppTextStyles.body2Regular,
-      displayLarge: AppTextStyles.heading1Bold,
+      displayLarge: AppTextStyles.displayLargeDarkBlue,
+      titleMedium: AppTextStyles.subtitle1,
+      headlineMedium: AppTextStyles.headingMediumTextBlue,
+      bodySmall: AppTextStyles.captionBlue,
     ),
     extensions: [
       ColorThemeExt(

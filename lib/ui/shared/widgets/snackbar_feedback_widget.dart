@@ -87,7 +87,10 @@ class SnackBarFeedbackWidget extends StatelessWidget {
             if (title != null)
               Padding(
                 padding: const EdgeInsets.only(bottom: 4.0),
-                child: Text("${title}", style: TextStyle(color: darken(color, .5)),),
+                child: Text(
+                  "$title",
+                  style: TextStyle(color: darken(color, .5)),
+                ),
               ),
             Text(message)
           ],
