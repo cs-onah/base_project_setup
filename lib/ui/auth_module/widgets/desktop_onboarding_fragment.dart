@@ -35,7 +35,7 @@ class DesktopOnboardingFragment extends HookWidget {
     });
     return Container(
       color: context.customTheme<ColorThemeExt>().blueBg,
-      padding: EdgeInsets.all(100),
+      padding: EdgeInsets.all(80),
       child: Center(
         child: ConstrainedBox(
           constraints: BoxConstraints(maxWidth: 400, minWidth: 100),

@@ -1,3 +1,4 @@
+import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:swiftsell/core/constants/image_path.dart';
@@ -11,7 +12,6 @@ import 'package:swiftsell/ui/shared/widgets/password_form_field.dart';
 
 class DesktopSignInScreen extends StatelessWidget {
   const DesktopSignInScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

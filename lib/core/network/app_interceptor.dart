@@ -10,7 +10,9 @@ class ApiInterceptor extends Interceptor {
 
   @override
   Future onRequest(
-      RequestOptions options, RequestInterceptorHandler handler) async {
+    RequestOptions options,
+    RequestInterceptorHandler handler,
+  ) async {
     String? accessToken = localStorage.accessToken;
     if (accessToken != null) {
       options.headers.addAll({
@@ -22,14 +24,10 @@ class ApiInterceptor extends Interceptor {
 
   @override
   Future<void> onResponse(
-      Response response, ResponseInterceptorHandler handler) async {
+    Response response,
+    ResponseInterceptorHandler handler,
+  ) async {
     return super.onResponse(response, handler);
-  }
-
-  @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
-    try {} catch (_) {}
-    super.onError(err, handler);
   }
 
   Future<String> _revalidateToken() async {

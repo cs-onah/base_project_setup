@@ -9,4 +9,6 @@ class LocalStorageService {
   String? get accessToken => null;
 
   void saveAccessToken(String token){}
+
+  static Future init() async {}
 }

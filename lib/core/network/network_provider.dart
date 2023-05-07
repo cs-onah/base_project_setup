@@ -60,7 +60,7 @@ class Network {
           response = await dio.post(path,
               queryParameters: params,
               data: data,
-              options: Options(responseType: responseType));
+              options: Options(responseType: responseType),);
           break;
         case RequestMethod.get:
           response = await dio.get(path, queryParameters: params);
@@ -70,7 +70,7 @@ class Network {
           break;
         case RequestMethod.delete:
           response =
-              await dio.delete(path, queryParameters: params, data: data);
+              await dio.delete(path, queryParameters: params, data: data,);
           break;
         case RequestMethod.upload:
           response = await dio.post(
