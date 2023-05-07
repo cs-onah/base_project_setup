@@ -18,13 +18,13 @@ ThemeData _buildLightTheme() {
     error: _Colors.red,
   );
   final themeData = ThemeData(
-    brightness: Brightness.light,
+    // brightness: Brightness.dark,
     primaryColor: primaryColor,
     scaffoldBackgroundColor: _Colors.scaffoldColor,
     cardColor: _Colors.white,
     colorScheme: colorScheme,
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.transparent,
+      backgroundColor: _Colors.scaffoldColor,
       centerTitle: true,
       elevation: 0,
     ),
@@ -37,6 +37,7 @@ ThemeData _buildLightTheme() {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
+        minimumSize: const Size(double.maxFinite, 56),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         elevation: 0,
         backgroundColor: _Colors.blue,
@@ -62,7 +63,7 @@ ThemeData _buildLightTheme() {
     ),
     textTheme: TextTheme(
       bodyMedium: AppTextStyles.body2Regular,
-      displayLarge: AppTextStyles.heading1Bold.copyWith(color: _Colors.white),
+      displayLarge: AppTextStyles.heading1Bold,
     ),
     extensions: [
       ColorThemeExt(
@@ -70,6 +71,9 @@ ThemeData _buildLightTheme() {
         red: _Colors.red,
         yellow: _Colors.yellow,
         blue: _Colors.blue,
+        white: _Colors.white,
+        textBlack: _Colors.textBlack,
+        lighterBlue: _Colors.lighterBlue,
       ),
     ],
   );

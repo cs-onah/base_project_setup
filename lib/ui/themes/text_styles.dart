@@ -5,7 +5,7 @@ class AppTextStyles {
     fontSize: 32,
     fontWeight: FontWeight.w700,
     fontFamily: AppFont.poppinsBold,
-    color: _Colors.lighterBlue,
+    color: _Colors.darkBlue,
   );
 
   static const heading2Bold = TextStyle(
@@ -19,7 +19,7 @@ class AppTextStyles {
     fontSize: 22,
     fontWeight: FontWeight.w700,
     fontFamily: AppFont.poppinsBold,
-    color: _Colors.lighterBlue,
+    color: _Colors.darkBlue,
   );
 
   static const subtitle = TextStyle(

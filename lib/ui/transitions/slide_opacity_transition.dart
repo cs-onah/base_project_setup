@@ -14,7 +14,7 @@ class _SlideOpacityTransitionState extends State<SlideOpacityTransition>
     with SingleTickerProviderStateMixin {
   late AnimationController controller;
 
-  final slideTween = Tween<Offset>(begin: Offset(0, 5), end: Offset.zero);
+  final slideTween = Tween<Offset>(begin: Offset(0, 0.15), end: Offset.zero);
 
   @override
   void initState() {
@@ -33,10 +33,7 @@ class _SlideOpacityTransitionState extends State<SlideOpacityTransition>
       child: widget.child,
       builder: (_, child) {
         return Opacity(
-          opacity: CurvedAnimation(
-            parent: controller,
-            curve: Curves.fastOutSlowIn,
-          ).value,
+          opacity: controller.value,
           child: SlideTransition(
             position: slideTween.animate(controller),
             child: child!,

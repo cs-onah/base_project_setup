@@ -26,7 +26,9 @@ class SplashScreen extends StatelessWidget {
                   const SizedBox(width: 10),
                   Text(
                     "Swiftsell",
-                    style: context.textTheme.displayLarge,
+                    style: context.textTheme.displayLarge?.copyWith(
+                      color: context.customTheme<ColorThemeExt>().lighterBlue,
+                    ),
                   )
                 ],
               ),
@@ -35,7 +37,7 @@ class SplashScreen extends StatelessWidget {
             SlideOpacityTransition(
               duration: Duration(milliseconds: 1500),
               child: AnimatedLinearProgressBar(
-                onLoadComplete: ()=> context.pushAndRemoveUntilMasterPage(),
+                onLoadComplete: () => context.pushAndRemoveUntilMasterPage(),
               ),
             ),
             Spacer(flex: 2),
@@ -48,12 +50,13 @@ class SplashScreen extends StatelessWidget {
 
 class AnimatedLinearProgressBar extends HookWidget {
   final VoidCallback? onLoadComplete;
-  const AnimatedLinearProgressBar( {Key? key, this.onLoadComplete}) : super(key: key);
+  const AnimatedLinearProgressBar({Key? key, this.onLoadComplete})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final controller = useAnimationController(
-      duration: const Duration(seconds: 5),
+      duration: const Duration(seconds: 2),
     );
     controller.addStatusListener((AnimationStatus status) async {
       if (status == AnimationStatus.completed) {
@@ -76,4 +79,3 @@ class AnimatedLinearProgressBar extends HookWidget {
     );
   }
 }
-
