@@ -1,5 +1,5 @@
-name: swiftsell
-description: SwiftSell is a comprehensive inventory, sales & employee solution.
+name: demo
+description: Flutter project setup demo
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1

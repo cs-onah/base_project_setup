@@ -1,8 +1,8 @@
-# SwiftSell
+# My Base Project Setup
 
-SwiftSell is a comprehensive inventory, sales & employee solution.
+Description: Shows theming style, folder structure, network config, & general project setup
 
-## Getting Started
-Flutter Version: 3.7.0
-State Management: [Riverpod](https://riverpod.dev/docs/getting_started)
-Design Prototype: [Figma](https://www.figma.com/proto/1TCc6V3s3kuEE1vZco9nIP/SwiftSell?type=design&node-id=434-25095&scaling=scale-down&page-id=1%3A3&starting-point-node-id=434%3A25095&show-proto-sidebar=1)
+## ui folder
+* Each module of the project owns a folder in the UI folder. 
+* Each module folder is made up of pages, providers & widgets
+* themes: created as a library that holds the app colors, textstyles, font names, and theme. All theme related resources are exposed using the app ```ThemeData```.
