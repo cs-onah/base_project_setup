@@ -30,19 +30,19 @@ class ApiInterceptor extends Interceptor {
     return super.onResponse(response, handler);
   }
 
-  Future<String> _revalidateToken() async {
-    try {
-      String path = "user/refreshToken";
-      final response = await Network.noInterceptor().call(
-        path,
-        RequestMethod.post,
-        data: {'token': localStorage.accessToken, "duration": 31557600},
-      );
-      final newToken = response.data["data"]["token"];
-      localStorage.saveAccessToken(newToken);
-      return newToken;
-    } catch (error) {
-      rethrow;
-    }
-  }
+  // Future<String> _revalidateToken() async {
+  //   try {
+  //     String path = "user/refreshToken";
+  //     final response = await Network.noInterceptor().call(
+  //       path,
+  //       RequestMethod.post,
+  //       data: {'token': localStorage.accessToken, "duration": 31557600},
+  //     );
+  //     final newToken = response.data["data"]["token"];
+  //     localStorage.saveAccessToken(newToken);
+  //     return newToken;
+  //   } catch (error) {
+  //     rethrow;
+  //   }
+  // }
 }

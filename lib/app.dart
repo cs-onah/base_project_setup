@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swiftsell/core/constants/route_names.dart';
-import 'package:swiftsell/ui/themes/theme.dart';
+import 'package:demo/core/constants/route_names.dart';
+import 'package:demo/ui/themes/theme.dart';
 
 class SwiftSellApp extends StatelessWidget {
   const SwiftSellApp({Key? key}) : super(key: key);

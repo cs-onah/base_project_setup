@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:swiftsell/core/utils/context_extension.dart';
-import 'package:swiftsell/core/utils/validators.dart';
-import 'package:swiftsell/ui/auth_module/providers/textfield_controllers.dart';
-import 'package:swiftsell/ui/shared/widgets/app_input_field.dart';
-import 'package:swiftsell/ui/shared/widgets/custom_app_bar.dart';
-import 'package:swiftsell/ui/shared/widgets/password_form_field.dart';
+import 'package:demo/core/utils/context_extension.dart';
+import 'package:demo/core/utils/validators.dart';
+import 'package:demo/ui/auth_module/providers/textfield_controllers.dart';
+import 'package:demo/ui/shared/widgets/app_input_field.dart';
+import 'package:demo/ui/shared/widgets/custom_app_bar.dart';
+import 'package:demo/ui/shared/widgets/password_form_field.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SignInScreen extends ConsumerWidget with Validators {

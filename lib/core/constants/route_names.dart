@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:swiftsell/ui/auth_module/pages/master_screen.dart';
-import 'package:swiftsell/ui/auth_module/pages/signin_screen.dart';
-import 'package:swiftsell/ui/auth_module/pages/splash_screen.dart';
+import 'package:demo/ui/auth_module/pages/master_screen.dart';
+import 'package:demo/ui/auth_module/pages/signin_screen.dart';
+import 'package:demo/ui/auth_module/pages/splash_screen.dart';
 
 class RouteNames {
   ///Route names used through out the app will be specified as static constants here in this format

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:swiftsell/core/constants/svg_path.dart';
-import 'package:swiftsell/core/utils/context_extension.dart';
-import 'package:swiftsell/ui/shared/widgets/svg_render_widget.dart';
-import 'package:swiftsell/ui/themes/colors_theme_extension.dart';
+import 'package:demo/core/constants/svg_path.dart';
+import 'package:demo/core/utils/context_extension.dart';
+import 'package:demo/ui/shared/widgets/svg_render_widget.dart';
+import 'package:demo/ui/themes/colors_theme_extension.dart';
 
 enum SnackBarFeedbackType { success, error, info, warning }
 

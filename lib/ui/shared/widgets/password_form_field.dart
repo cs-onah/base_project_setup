@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:swiftsell/core/utils/validators.dart';
+import 'package:demo/core/utils/validators.dart';
 
 class PasswordField extends HookWidget with Validators {
   final ValueChanged<String>? onChanged;

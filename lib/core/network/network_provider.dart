@@ -5,14 +5,14 @@ final networkProvider = Provider<Network>((ref) {
 });
 
 class Network {
-  static const CONNECT_TIME_OUT = Duration(seconds: 60);
-  static const RECEIVE_TIME_OUT = Duration(seconds: 60);
+  static const connectTimeOut = Duration(seconds: 60);
+  static const receiverTimeOut = Duration(seconds: 60);
   late Dio dio;
   late bool showLog;
 
   final _dioBaseOptions = BaseOptions(
-    connectTimeout: CONNECT_TIME_OUT,
-    receiveTimeout: RECEIVE_TIME_OUT,
+    connectTimeout: connectTimeOut,
+    receiveTimeout: receiverTimeOut,
     baseUrl: UrlConfig.baseUrl,
     headers: {
       'Accept': 'application/json',

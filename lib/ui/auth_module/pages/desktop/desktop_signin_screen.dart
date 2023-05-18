@@ -1,14 +1,13 @@
-import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:swiftsell/core/constants/image_path.dart';
-import 'package:swiftsell/core/utils/context_extension.dart';
-import 'package:swiftsell/core/utils/validators.dart';
-import 'package:swiftsell/ui/auth_module/providers/textfield_controllers.dart';
-import 'package:swiftsell/ui/auth_module/widgets/desktop_onboarding_fragment.dart';
-import 'package:swiftsell/ui/shared/widgets/app_input_field.dart';
-import 'package:swiftsell/ui/shared/widgets/image_render_widget.dart';
-import 'package:swiftsell/ui/shared/widgets/password_form_field.dart';
+import 'package:demo/core/constants/image_path.dart';
+import 'package:demo/core/utils/context_extension.dart';
+import 'package:demo/core/utils/validators.dart';
+import 'package:demo/ui/auth_module/providers/textfield_controllers.dart';
+import 'package:demo/ui/auth_module/widgets/desktop_onboarding_fragment.dart';
+import 'package:demo/ui/shared/widgets/app_input_field.dart';
+import 'package:demo/ui/shared/widgets/image_render_widget.dart';
+import 'package:demo/ui/shared/widgets/password_form_field.dart';
 
 class DesktopSignInScreen extends StatelessWidget {
   const DesktopSignInScreen({Key? key}) : super(key: key);

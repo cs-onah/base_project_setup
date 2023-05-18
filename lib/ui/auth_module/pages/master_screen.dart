@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:swiftsell/ui/auth_module/pages/desktop/desktop_signin_screen.dart';
-import 'package:swiftsell/ui/auth_module/pages/home_screen.dart';
-import 'package:swiftsell/ui/auth_module/pages/onboarding_screen.dart';
-import 'package:swiftsell/ui/shared/responsive_screen.dart';
+import 'package:demo/ui/auth_module/pages/desktop/desktop_signin_screen.dart';
+import 'package:demo/ui/auth_module/pages/home_screen.dart';
+import 'package:demo/ui/auth_module/pages/onboarding_screen.dart';
+import 'package:demo/ui/shared/responsive_screen.dart';
 
 class MasterScreen extends StatelessWidget {
   const MasterScreen({Key? key}) : super(key: key);

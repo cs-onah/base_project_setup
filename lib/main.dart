@@ -1,14 +1,11 @@
 import 'dart:developer';
-import 'dart:io';
 
 import 'package:desktop_window/desktop_window.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:swiftsell/app.dart';
-import 'package:swiftsell/core/utils/local_storage.dart';
-import 'package:swiftsell/ui/shared/responsive_screen.dart';
+import 'package:demo/app.dart';
+import 'package:demo/core/utils/local_storage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

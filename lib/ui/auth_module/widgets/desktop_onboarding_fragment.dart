@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:swiftsell/core/constants/image_path.dart';
-import 'package:swiftsell/core/utils/context_extension.dart';
-import 'package:swiftsell/ui/auth_module/widgets/bar_indicator.dart';
-import 'package:swiftsell/ui/shared/widgets/image_render_widget.dart';
-import 'package:swiftsell/ui/themes/colors_theme_extension.dart';
+import 'package:demo/core/constants/image_path.dart';
+import 'package:demo/core/utils/context_extension.dart';
+import 'package:demo/ui/auth_module/widgets/bar_indicator.dart';
+import 'package:demo/ui/shared/widgets/image_render_widget.dart';
+import 'package:demo/ui/themes/colors_theme_extension.dart';
 
 class DesktopOnboardingFragment extends HookWidget {
   const DesktopOnboardingFragment({Key? key}) : super(key: key);

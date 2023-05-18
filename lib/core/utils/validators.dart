@@ -1,4 +1,4 @@
-import 'package:swiftsell/core/utils/string_extension.dart';
+import 'package:demo/core/utils/string_extension.dart';
 
 /// Class of validation functions that the app will use
 ///   - This class should be used as a mixin using the `with` keyword

@@ -1,5 +1,5 @@
 import 'package:event_bus/event_bus.dart';
-import 'package:swiftsell/core/utils/logger.dart';
+import 'package:demo/core/utils/logger.dart';
 
 /// A default instance of [EventBus] shared by the app,
 /// this is initialised once and serve as a singleton

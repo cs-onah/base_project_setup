@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swiftsell/core/constants/route_names.dart';
-import 'package:swiftsell/ui/shared/widgets/snackbar_feedback_widget.dart';
+import 'package:demo/core/constants/route_names.dart';
+import 'package:demo/ui/shared/widgets/snackbar_feedback_widget.dart';
 
 extension BuildContextExt on BuildContext {
   ThemeData get themeData => Theme.of(this);

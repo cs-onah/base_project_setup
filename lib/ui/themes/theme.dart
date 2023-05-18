@@ -1,7 +1,7 @@
 library theme;
 
 import 'package:flutter/material.dart';
-import 'package:swiftsell/ui/themes/colors_theme_extension.dart';
+import 'package:demo/ui/themes/colors_theme_extension.dart';
 
 part 'colors.dart';
 part 'fonts.dart';

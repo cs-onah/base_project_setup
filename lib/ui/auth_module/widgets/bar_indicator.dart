@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swiftsell/core/utils/context_extension.dart';
-import 'package:swiftsell/ui/themes/colors_theme_extension.dart';
+import 'package:demo/core/utils/context_extension.dart';
+import 'package:demo/ui/themes/colors_theme_extension.dart';
 
 class BarIndicator extends StatelessWidget {
   final int selectedIndex, length;
